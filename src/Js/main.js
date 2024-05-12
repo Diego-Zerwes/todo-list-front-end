@@ -8,14 +8,15 @@ document.addEventListener('DOMContentLoaded', async function(){
 
 async function criarTarefas(){
   const input = document.getElementById('crear-todo');
-  input.addEventListener("keydown", async (ev)=>{
+  input.addEventListener("keypress", async (ev)=>{
     console.log(ev.code);
-    if(ev.code == "Enter"){
+    if(ev.code === "Enter"){
       const resultado = await crearTarefa(input.value);
       await vizualisarTarefas();
+      input.value = "";
     }
-    input.value = "";
   });
+ 
 }
 
 async function vizualisarTarefas(){
@@ -36,7 +37,7 @@ async function pesquisarTarefas(){
       await vizualisarTarefas();
     }
 
-    todos = todos.filter((tarefa)=>{
+    todos = todos.filter((tarefa)=>{//retorna condição verdadeiro ou falso
       return tarefa.todo.toLowerCase().includes(pesquisa.value.toLowerCase());
       
     })
@@ -55,3 +56,4 @@ function gerarTarefa(tarefa){
   <button><img src="/src/img/icon-cross.svg" alt="excluir"></button>
   </div>`
 }
+
