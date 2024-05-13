@@ -18,4 +18,17 @@ export async function crearTarefa(tarefa){
   })
 }
 
+export async function excluirTarefa(tarefa){
+  return await fetch(url,{
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+  body: JSON.stringify({
+    id: tarefa
+  }),
+    method:"DELETE"
+  })
+}
+
 

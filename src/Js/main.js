@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', async function(){
   await vizualisarTarefas();
   await criarTarefas();
   await pesquisarTarefas();
+  await excluirTarefa();
 })
 
 async function criarTarefas(){
@@ -49,11 +50,18 @@ async function pesquisarTarefas(){
   })
 }
 
+async function excluirTarefa(){
+  const idTarefa = document.getElementById('excluir');
+  idTarefa.addEventListener('click', async(ev)=>{
+  idTarefa = excluir.parentNode().id;
+  })
+}
+
 function gerarTarefa(tarefa){
-  return `<div id="tarefa">
+  return `<div id="${tarefa.id}">
   <input type="checkbox" checked=${tarefa.completed ? `checked` : ""}}>
   <p class="conteudo">${tarefa.todo}</p>
-  <button><img src="/src/img/icon-cross.svg" alt="excluir"></button>
+  <button id="excluir"><img src="/src/img/icon-cross.svg" alt="excluir"></button>
   </div>`
 }
 
