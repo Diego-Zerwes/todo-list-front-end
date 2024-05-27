@@ -1,0 +1,8 @@
+Envio bem-sucedido!
+Curso: 20241-BOU-ANLSDSN02-98029, BOU-20241-ADSMPB-N-Desenvolvimento Web e Aplicativos
+Avaliação: Exercício manipulação do DOM e localStorage
+
+Data de envio: 19/05/24 14:51 (Com atraso)
+Tamanho do envio: 106 bytes
+Autor do envio: Diego Zerwes Feitosa
+Número de confirmação: 4c76582ea93d4bdf9d49642ca96eb765
